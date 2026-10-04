@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>گل برگ | فروشگاه لباس زیر زنانه</title>
+<meta name="description" content="گل برگ، فروشگاه لباس زیر زنانه">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffbfc; --bg-soft:#fff3f7; --card:#ffffff;
+  --ink:#402634; --ink-soft:#9c7c88; --line:#ffe1ec;
+  --pink:#ff7fa8; --pink-dark:#f25c8c; --on-pink:#ffffff; --pink-soft:#ffe6ef;
+  --mint:#8fd9c4; --gold:#f3c569; --danger:#e6607a;
+  --band:#f25c8c; --band-ink:#fff5f8;
+  --radius:18px; --radius-sm:12px; --focus:#f25c8c;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#221419; --bg-soft:#2a161d; --card:#2c161d;
+    --ink:#fbe9f0; --ink-soft:#cf9bad; --line:#3d2028;
+    --pink:#ff8fb4; --pink-dark:#ffa8c4; --on-pink:#2a141b; --pink-soft:#3a1f28;
+    --band:#3a1a24; --band-ink:#fdeaf1; --focus:#ff8fb4; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#221419; --bg-soft:#2a161d; --card:#2c161d;
+  --ink:#fbe9f0; --ink-soft:#cf9bad; --line:#3d2028;
+  --pink:#ff8fb4; --pink-dark:#ffa8c4; --on-pink:#2a141b; --pink-soft:#3a1f28;
+  --band:#3a1a24; --band-ink:#fdeaf1; --focus:#ff8fb4;
+}
+*,*::before,*::after{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;background:var(--bg)}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.85}
+h1,h2,h3{margin:0;font-weight:700}
+p{margin:0}
+button,input,select,textarea{font-family:inherit}
+[hidden]{display:none !important}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{width:min(1100px,100% - 2.5rem);margin-inline:auto}
+.muted{color:var(--ink-soft)}
+.bdi-ltr{direction:ltr;unicode-bidi:isolate}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:44px;padding:.5rem 1.4rem;border-radius:999px;border:1.5px solid var(--pink);font:inherit;font-weight:600;cursor:pointer;background:transparent;color:var(--pink-dark);transition:background .15s,transform .1s}
+.btn:active{transform:scale(.96)}
+.btn-primary{background:var(--pink);border-color:var(--pink);color:var(--on-pink)}
+.btn-primary:hover{background:var(--pink-dark);border-color:var(--pink-dark)}
+.btn-outline:hover{background:var(--pink-soft)}
+.btn-light{background:#fff;border-color:#fff;color:var(--pink-dark)}
+.btn-danger{border-color:var(--danger);color:var(--danger)}
+.btn-danger:hover{background:var(--danger);color:#fff}
+.btn-block{width:100%}
+.btn-sm{min-height:36px;padding:.3rem 1rem;font-size:.88rem}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.icon-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;position:relative}
+.icon-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.count{position:absolute;top:-6px;left:-6px;min-width:19px;height:19px;padding:0 4px;border-radius:999px;background:var(--gold);color:#4a3306;font-size:.7rem;font-weight:700;line-height:19px;text-align:center}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius)}
+
+/* Splash */
+#splashScreen{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(160deg,#ffd3e4,#ffb8d2 55%,#ff9fc0);padding:1.5rem;color:#5a1533}
+.splash-mark{font-size:3.2rem;margin-bottom:.4rem}
+.splash-title{font-size:clamp(2.1rem,7vw,3.4rem)}
+.splash-sub{margin-top:.6rem;font-size:1.05rem;color:#7a2a4c;max-width:22rem}
+.splash-cta{margin-top:2rem;min-width:11rem;background:#fff;border-color:#fff;color:#e14b83}
+.splash-foot{margin-top:1.6rem;font-size:.82rem;color:#8a3958}
+
+/* Auth */
+#phoneScreen,#otpScreen{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;background:var(--bg-soft);padding:2rem 1.25rem}
+.auth-card{position:relative;width:min(400px,100%);padding:2rem;border-radius:24px}
+.auth-back{position:absolute;top:1rem;inset-inline-start:1rem}
+.auth-card h2{font-size:1.4rem;margin-bottom:.3rem}
+.auth-card p.muted{margin-bottom:1.4rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:.88rem;color:var(--ink-soft);margin-bottom:.35rem}
+.field input{width:100%;min-height:48px;padding:0 1rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;direction:ltr;text-align:center}
+.field input:focus-visible{border-color:var(--pink)}
+.otp-boxes{display:flex;gap:.5rem;justify-content:center;direction:ltr;margin-bottom:.5rem}
+.otp-boxes input{width:2.9rem;height:3.2rem;text-align:center;font-size:1.4rem;font-weight:700;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--bg);color:var(--ink)}
+.otp-boxes input.err{border-color:var(--danger)}
+@media (prefers-reduced-motion:no-preference){ .shake{animation:shake .35s} }
+@keyframes shake{20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+.demo-code{margin:.2rem 0 1.1rem;padding:.7rem 1rem;background:var(--pink-soft);border-radius:var(--radius-sm);font-size:.88rem;text-align:center}
+.demo-code b{font-size:1.1rem;letter-spacing:.1em;color:var(--pink-dark)}
+.auth-links{display:flex;justify-content:space-between;margin-top:1rem;font-size:.85rem}
+.auth-links button{background:none;border:0;padding:0;color:var(--pink-dark);cursor:pointer;text-decoration:underline;font:inherit}
+.field-err{min-height:1.2rem;color:var(--danger);font-size:.83rem;margin-top:.3rem}
+
+/* Site */
+.announce{background:var(--band);color:var(--band-ink);text-align:center;font-size:.85rem;padding:.5rem 1rem}
+.site-header{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.head-inner{display:flex;align-items:center;gap:1rem;min-height:64px}
+.brand{display:flex;align-items:center;gap:.4rem;font-weight:700;font-size:1.4rem;background:none;border:0;cursor:pointer;color:var(--ink)}
+.nav{flex:1;display:flex;justify-content:center;gap:1.8rem}
+.nav a{text-decoration:none;color:var(--ink-soft);font-weight:500}
+.nav a:hover{color:var(--pink-dark)}
+.head-actions{display:flex;gap:.5rem}
+.menu-btn{display:none}
+.search-row{max-height:0;overflow:hidden;background:var(--bg-soft);transition:max-height .2s}
+.search-row.open{max-height:70px;border-bottom:1px solid var(--line)}
+.search-row .wrap{padding:.6rem 0}
+.search-row input{width:100%;min-height:42px;padding:0 1rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--bg);color:var(--ink)}
+
+.hero{background:var(--bg-soft)}
+.hero-inner{text-align:center;padding-block:3rem}
+.hero-emoji{font-size:3rem}
+.hero h1{font-size:clamp(1.9rem,5vw,2.7rem);margin-top:.4rem}
+.hero p{color:var(--ink-soft);max-width:30rem;margin:.7rem auto 0}
+.hero-actions{display:flex;justify-content:center;gap:.7rem;margin-top:1.5rem;flex-wrap:wrap}
+
+.trust{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;padding:1.5rem 0;font-size:.92rem;color:var(--ink-soft)}
+
+.section{padding-block:2.5rem}
+.section h2{font-size:1.5rem}
+.shop-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.chip{min-height:38px;padding:0 1.1rem;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:inherit;font-weight:500;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:var(--on-pink)}
+.chip-stock[aria-pressed="true"]{background:var(--mint);border-color:var(--mint);color:#0d3a2c}
+.count-line{font-size:.86rem;margin-top:.9rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:1rem}
+.product{cursor:default}
+.p-media{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.p-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.p-emoji{font-size:3.4rem}
+.tag,.tag-trend{position:absolute;top:8px;right:8px;z-index:2;padding:.1rem .6rem;border-radius:999px;font-size:.72rem;font-weight:700}
+.tag{background:var(--gold);color:#4a3306}
+.tag-trend{background:var(--pink-dark);color:#fff}
+.wish{position:absolute;top:8px;left:8px;z-index:3;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.85);border:0;display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.oos{position:absolute;inset:0;z-index:2;background:rgba(64,38,52,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;border-radius:var(--radius)}
+.p-info{padding-top:.7rem}
+.p-name{font-size:.98rem;font-weight:600}
+.p-cat{font-size:.82rem;color:var(--ink-soft)}
+.p-price{font-weight:700;margin:.2rem 0 .6rem}
+.old-price{text-decoration:line-through;color:var(--ink-soft);font-weight:400;font-size:.82rem;margin-inline-end:.3rem}
+.disc-badge{color:var(--danger);font-size:.78rem;font-weight:700}
+.empty-shop{padding:2.5rem 0;text-align:center;color:var(--ink-soft)}
+
+.footer{padding-block:2.2rem;border-top:1px solid var(--line);margin-top:1rem}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.5rem}
+.footer h3{font-size:.92rem;margin-bottom:.4rem}
+.footer ul{list-style:none;margin:0;padding:0;color:var(--ink-soft);font-size:.9rem}
+.footer li{margin-bottom:.15rem}
+.foot-note{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--ink-soft)}
+.foot-note button{background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+
+/* Cart */
+.overlay{position:fixed;inset:0;z-index:40;background:rgba(64,38,52,.45);opacity:0;visibility:hidden;transition:opacity .2s,visibility 0s .2s}
+.overlay.show{opacity:1;visibility:visible;transition:opacity .2s}
+.drawer{position:fixed;top:0;bottom:0;left:0;z-index:50;width:min(400px,92vw);background:var(--bg);display:flex;flex-direction:column;transform:translateX(-102%);transition:transform .25s}
+.drawer.open{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--line)}
+.drawer-body{flex:1;overflow-y:auto;padding:0 1.2rem}
+.drawer-foot{padding:1rem 1.2rem}
+.empty{padding:2.5rem 0;text-align:center;display:grid;gap:1rem;justify-items:center;color:var(--ink-soft)}
+.ci{display:grid;grid-template-columns:56px 1fr auto;gap:.8rem;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.ci-media{width:56px;height:56px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.6rem;overflow:hidden;position:relative}
+.ci-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ci-name{font-weight:600;font-size:.92rem}
+.ci-meta{font-size:.8rem;color:var(--ink-soft);display:flex;align-items:center;gap:.3rem}
+.ci-swatch{width:9px;height:9px;border-radius:50%;display:inline-block}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;margin-top:.3rem}
+.qty button{width:28px;height:28px;background:none;border:0;font-size:1.1rem;cursor:pointer;color:var(--ink)}
+.qty span{min-width:1.6rem;text-align:center;font-size:.88rem}
+.ci-price{font-weight:700;font-size:.88rem}
+.ci-remove{background:none;border:0;color:var(--ink-soft);font-size:.8rem;text-decoration:underline;cursor:pointer;padding:0}
+.ship{font-size:.82rem;color:var(--ink-soft);margin-bottom:.8rem}
+.total{display:flex;justify-content:space-between;margin-bottom:.8rem;font-size:1rem}
+.total strong{font-size:1.15rem}
+
+.toast{position:fixed;inset-inline:0;bottom:calc(1.1rem + env(safe-area-inset-bottom,0px));z-index:70;margin-inline:auto;width:max-content;max-width:88vw;padding:.6rem 1.2rem;background:var(--band);color:var(--band-ink);border-radius:999px;font-size:.9rem;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:none}
+
+/* Product detail modal */
+.pdp-overlay{position:fixed;inset:0;z-index:54;background:rgba(64,38,52,.45);opacity:0;visibility:hidden;transition:opacity .2s,visibility 0s .2s}
+.pdp-overlay.show{opacity:1;visibility:visible;transition:opacity .2s}
+.pdp{position:fixed;inset:0;z-index:56;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;visibility:hidden;transition:opacity .2s,visibility 0s .2s}
+.pdp.open{opacity:1;visibility:visible;transition:opacity .2s}
+.pdp-card{position:relative;width:min(640px,100%);max-height:90vh;overflow-y:auto;background:var(--bg);border-radius:24px}
+.pdp-close{position:absolute;top:.9rem;inset-inline-end:.9rem;z-index:2;background:var(--card)}
+.pdp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;padding:1.4rem}
+.pdp-media{aspect-ratio:1/1;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pdp-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pdp-body h2{font-size:1.3rem;padding-inline-end:2rem}
+.pdp-price{font-weight:700;margin:.4rem 0 .9rem}
+.pdp-desc{color:var(--ink-soft);margin-bottom:.9rem}
+.pdp-specs{margin-bottom:.9rem}
+.pdp-specs h3{font-size:.9rem;margin-bottom:.4rem}
+.pdp-specs ul{margin:0;padding-inline-start:1.1rem;color:var(--ink-soft);font-size:.88rem}
+.pdp-group{margin-bottom:.9rem}
+.pdp-group label{display:block;font-size:.85rem;color:var(--ink-soft);margin-bottom:.4rem}
+.pdp-colors,.pdp-sizes{display:flex;flex-wrap:wrap;gap:.45rem}
+.pdp-color{width:30px;height:30px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0}
+.pdp-color[aria-pressed="true"]{border-color:var(--ink)}
+.pdp-sizes button{min-width:2.3rem;height:2rem;padding:0 .5rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--card);color:var(--ink);font:inherit;font-size:.82rem;cursor:pointer}
+.pdp-sizes button[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:var(--on-pink)}
+.pdp-stock{font-size:.83rem;margin-bottom:.9rem;color:var(--ink-soft)}
+.pdp-stock.low{color:var(--gold);font-weight:600}
+.pdp-stock.out{color:var(--danger);font-weight:600}
+@media (max-width:640px){ .pdp-grid{grid-template-columns:1fr} }
+
+/* Admin */
+#adminScreen{min-height:100vh;min-height:100dvh;background:var(--bg-soft)}
+.admin-head{background:var(--band);color:var(--band-ink)}
+.admin-head-inner{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:1rem}
+.admin-badge{padding:.15rem .7rem;background:rgba(255,255,255,.18);border-radius:999px;font-size:.78rem}
+.admin-head-actions{margin-inline-start:auto;display:flex;gap:.5rem}
+.admin-main{padding-block:1.75rem 3rem}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+.stat{padding:1rem 1.1rem}
+.stat b{display:block;font-size:1.5rem}
+.stat span{font-size:.82rem;color:var(--ink-soft)}
+.admin-tabs{display:flex;gap:.5rem;margin-bottom:1.25rem}
+.admin-tabs button{min-height:40px;padding:0 1.1rem;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:inherit;font-weight:500;cursor:pointer}
+.admin-tabs button[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:var(--on-pink)}
+.admin-cols{display:grid;grid-template-columns:1fr 1.4fr;gap:1.5rem;align-items:start}
+.panel{padding:1.25rem}
+.panel h2{font-size:1.1rem;margin-bottom:1rem}
+.form-row{margin-bottom:.9rem}
+.form-row label{display:block;font-size:.85rem;color:var(--ink-soft);margin-bottom:.3rem}
+.form-row input,.form-row select,.form-row textarea{width:100%;min-height:42px;padding:0 .8rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--card);color:var(--ink);font:inherit}
+.form-row textarea{min-height:70px;padding:.5rem .8rem;resize:vertical}
+.form-row input[type="file"]{padding:.5rem .8rem;min-height:auto}
+.form-two{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.swatches{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center}
+.swatch{width:30px;height:30px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0}
+.swatch[aria-pressed="true"]{border-color:var(--ink)}
+.swatch-add{width:30px;height:30px;border-radius:50%;border:1.5px dashed var(--ink-soft);background:var(--card);cursor:pointer;padding:0;overflow:hidden;position:relative}
+.swatch-add input[type="color"]{position:absolute;inset:-4px;width:200%;height:200%;border:0;padding:0;cursor:pointer}
+.size-opts{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.6rem}
+.size-opts button{min-width:2.3rem;height:2rem;padding:0 .5rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--card);color:var(--ink);font:inherit;font-size:.82rem;cursor:pointer}
+.size-opts button[aria-pressed="true"]{background:var(--pink);border-color:var(--pink);color:var(--on-pink)}
+.size-add-row{display:flex;gap:.5rem}
+.size-add-row input{flex:1;min-height:38px;padding:0 .7rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--card);color:var(--ink);font:inherit}
+#pImagePreview{display:block;width:60px;height:60px;object-fit:cover;border-radius:var(--radius-sm);margin-top:.5rem;border:1px solid var(--line)}
+.check-row{display:flex;align-items:center;gap:.4rem;margin-bottom:.9rem}
+.check-row input{width:17px;height:17px}
+.admin-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.admin-item{display:grid;grid-template-columns:48px 1fr auto;gap:.7rem;align-items:center;padding:.6rem;border:1px solid var(--line);border-radius:var(--radius-sm)}
+.admin-actions{display:flex;flex-direction:column;gap:.35rem;align-items:stretch}
+.admin-actions .btn{white-space:nowrap}
+.admin-media{width:48px;height:48px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.4rem;overflow:hidden;position:relative}
+.admin-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ai-name{font-weight:600;font-size:.9rem}
+.ai-meta{font-size:.78rem;color:var(--ink-soft)}
+.ai-price{font-size:.82rem;font-weight:700;margin-top:.1rem}
+.ai-badge{display:inline-block;margin-inline-start:.3rem;padding:.03rem .45rem;background:var(--gold);color:#4a3306;border-radius:999px;font-size:.66rem;vertical-align:middle}
+.ai-oos{display:inline-block;margin-inline-start:.3rem;padding:.03rem .45rem;background:var(--pink-soft);color:var(--pink-dark);border-radius:999px;font-size:.66rem;vertical-align:middle}
+.ai-default{font-size:.68rem;color:var(--ink-soft)}
+.users-panel{display:flex;flex-direction:column;gap:.7rem}
+.user-row{display:grid;grid-template-columns:1fr auto auto;gap:.7rem;align-items:center;padding:.7rem 1rem;border:1px solid var(--line);border-radius:var(--radius-sm)}
+.user-phone{font-weight:600}
+.user-meta{font-size:.78rem;color:var(--ink-soft);margin-top:.15rem}
+.badge{padding:.1rem .6rem;border-radius:999px;font-size:.72rem;white-space:nowrap}
+.badge-active{background:var(--mint);color:#0d3a2c}
+.badge-blocked{background:var(--pink-soft);color:var(--pink-dark)}
+.no-users{padding:2rem 0;text-align:center;color:var(--ink-soft)}
+
+@media (max-width:980px){ .grid{grid-template-columns:repeat(3,1fr)} .admin-cols{grid-template-columns:1fr} .stat-row{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:860px){
+  .menu-btn{display:inline-grid}
+  .nav{display:none;position:absolute;inset-inline:0;top:100%;flex-direction:column;padding:.5rem 1.25rem 1rem;background:var(--bg);border-bottom:1px solid var(--line)}
+  .nav.open{display:flex}
+  .nav a{padding:.6rem 0;border-bottom:1px solid var(--line)}
+  .head-actions{margin-inline-start:auto}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid > :first-child{grid-column:1 / -1}
+  .admin-list{grid-template-columns:1fr}
+  .form-two{grid-template-columns:1fr}
+  .user-row{grid-template-columns:1fr;text-align:right}
+}
+@media (max-width:680px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+  .otp-boxes input{width:2.5rem;height:2.9rem;font-size:1.2rem}
+}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{transition-duration:.01ms !important} }
+</style>
+</head>
+<body>
+
+<section class="screen" id="splashScreen">
+  <div class="splash-mark">🌸</div>
+  <h1 class="splash-title">گل برگ</h1>
+  <p class="splash-sub">لباس زیر زنانه، نرم و راحت، برای هر روز شما.</p>
+  <button class="btn splash-cta" type="button" id="enterBtn">ورود به فروشگاه</button>
+  <p class="splash-foot">با شماره موبایل وارد می‌شوید</p>
+</section>
+
+<section class="screen" id="phoneScreen" hidden>
+  <div class="auth-card card">
+    <button class="icon-btn auth-back" type="button" id="phoneBack" aria-label="بازگشت">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg>
+    </button>
+    <h2>ورود به گل برگ</h2>
+    <p class="muted">شماره موبایل خود را وارد کنید تا کد تایید برایتان ارسال شود.</p>
+    <form id="phoneForm" novalidate>
+      <div class="field">
+        <label for="phoneInput">شماره موبایل</label>
+        <input id="phoneInput" type="tel" inputmode="numeric" placeholder="09xxxxxxxxx" autocomplete="tel" required>
+      </div>
+      <p class="field-err" id="phoneErr" aria-live="polite"></p>
+      <button class="btn btn-primary btn-block" type="submit">دریافت کد تایید</button>
+    </form>
+  </div>
+</section>
+
+<section class="screen" id="otpScreen" hidden>
+  <div class="auth-card card">
+    <button class="icon-btn auth-back" type="button" id="otpBack" aria-label="بازگشت">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg>
+    </button>
+    <h2>کد تایید را وارد کنید</h2>
+    <p class="muted">کد ۴ رقمی ارسال‌شده به <bdi id="phoneShow" dir="ltr" style="font-weight:600"></bdi> را وارد کنید.</p>
+    <div class="demo-code" id="demoCode"></div>
+    <div class="otp-boxes" id="otpBoxes">
+      <input maxlength="1" inputmode="numeric" aria-label="رقم اول">
+      <input maxlength="1" inputmode="numeric" aria-label="رقم دوم">
+      <input maxlength="1" inputmode="numeric" aria-label="رقم سوم">
+      <input maxlength="1" inputmode="numeric" aria-label="رقم چهارم">
+    </div>
+    <p class="field-err" id="otpErr" aria-live="polite"></p>
+    <button class="btn btn-primary btn-block" type="button" id="otpSubmit">ورود</button>
+    <div class="auth-links">
+      <button type="button" id="resendBtn">ارسال دوباره کد</button>
+      <button type="button" id="changePhone">تغییر شماره</button>
+    </div>
+  </div>
+</section>
+
+<div class="screen" id="siteScreen" hidden>
+  <div class="announce" id="announceBar">کالکشن جدید رسید 🌸 ارسال رایگان بالای ۲٬۰۰۰٬۰۰۰ تومان</div>
+  <header class="site-header">
+    <div class="wrap head-inner">
+      <button class="brand" id="siteBrand" type="button">🌸 گل برگ</button>
+      <nav class="nav" id="nav">
+        <a href="#shop">فروشگاه</a>
+        <a href="#contact">تماس</a>
+      </nav>
+      <div class="head-actions">
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-label="باز کردن منو">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <button class="icon-btn" id="searchBtn" type="button" aria-expanded="false" aria-label="جستجو">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+        <button class="btn btn-outline btn-sm" id="backToAdminBtn" type="button" hidden>پنل مدیریت</button>
+        <button class="icon-btn" id="cartBtn" type="button" aria-label="سبد خرید">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>
+          <span class="count" id="cartCount" hidden>۰</span>
+        </button>
+        <button class="icon-btn" id="headerLogoutBtn" type="button" aria-label="خروج از حساب">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="search-row" id="searchRow">
+      <div class="wrap"><input type="text" id="searchInput" placeholder="جستجوی محصول…"></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-emoji">🎀</div>
+        <h1>لباس زیری به نرمی یک گل</h1>
+        <p>پارچه‌های نرم، راحتی تمام روز، رنگ‌ها و سایزهای متنوع.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#shop">مشاهده محصولات</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap trust">
+      <span>🌿 پارچه نرم</span>
+      <span>🚚 ارسال سریع</span>
+      <span>↩️ بازگشت آسان</span>
+    </div>
+
+    <section class="section" id="shop">
+      <div class="wrap">
+        <div class="shop-head">
+          <div><h2>فروشگاه</h2><p class="muted">لباس زیر زنانه</p></div>
+        </div>
+        <div class="filters" role="group" aria-label="فیلتر">
+          <button class="chip" type="button" data-sort="default" aria-pressed="true">پیش‌فرض</button>
+          <button class="chip" type="button" data-sort="price-desc" aria-pressed="false">گران‌ترین</button>
+          <button class="chip" type="button" data-sort="price-asc" aria-pressed="false">ارزان‌ترین</button>
+          <button class="chip" type="button" data-sort="trend" aria-pressed="false">پرفروش‌ترین</button>
+          <button class="chip" type="button" data-sort="discount" aria-pressed="false">پرتخفیف‌ترین</button>
+          <button class="chip chip-stock" type="button" id="stockToggle" aria-pressed="false">فقط موجودها</button>
+        </div>
+        <p class="count-line muted" id="resultCount" aria-live="polite"></p>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="brand" style="cursor:default">🌸 گل برگ</div>
+          <p class="muted" style="margin-top:.5rem;max-width:20rem">لباس زیر زنانه، نرم و راحت.</p>
+        </div>
+        <div><h3>محصولات</h3><ul><li>سوتین</li><li>شورت</li><li>ست</li></ul></div>
+        <div id="contact"><h3>تماس با ما</h3><ul>
+          <li>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+          <li>ایمیل: <bdi dir="ltr">hello@golbarg.example</bdi></li>
+        </ul></div>
+      </div>
+      <p class="foot-note">© ۱۴۰۵ گل برگ. · <button type="button" id="logoutLink">خروج از حساب</button></p>
+    </div>
+  </footer>
+</div>
+
+<div class="screen" id="adminScreen" hidden>
+  <header class="admin-head">
+    <div class="wrap admin-head-inner">
+      <div class="brand" style="color:var(--band-ink)">🌸 گل برگ</div>
+      <span class="admin-badge">پنل مدیریت</span>
+      <div class="admin-head-actions">
+        <button class="btn btn-light btn-sm" type="button" id="viewSiteBtn">مشاهده فروشگاه</button>
+        <button class="btn btn-light btn-sm" type="button" id="adminLogout">خروج</button>
+      </div>
+    </div>
+  </header>
+  <main class="wrap admin-main">
+    <div class="stat-row">
+      <div class="stat card"><b id="statTotal">۰</b><span>تعداد محصولات</span></div>
+      <div class="stat card"><b id="statCustom">۰</b><span>افزوده‌شده شما</span></div>
+      <div class="stat card"><b id="statUsers">۰</b><span>تعداد کاربران</span></div>
+      <div class="stat card"><b id="statBlocked">۰</b><span>کاربران مسدود</span></div>
+    </div>
+
+    <div class="admin-tabs" role="tablist">
+      <button type="button" role="tab" data-tab="products" aria-pressed="true">مدیریت محصولات</button>
+      <button type="button" role="tab" data-tab="users" aria-pressed="false">مدیریت کاربران</button>
+      <button type="button" role="tab" data-tab="settings" aria-pressed="false">تغییرات سایت</button>
+    </div>
+
+    <div id="tabProducts">
+      <div class="admin-cols">
+        <div class="panel card">
+          <h2>افزودن محصول جدید</h2>
+          <form id="productForm" novalidate>
+            <div class="form-row"><label for="pName">نام محصول</label><input id="pName" type="text" placeholder="مثلاً سوتین توری" required></div>
+            <div class="form-two">
+              <div class="form-row"><label for="pPrice">قیمت (تومان)</label><input id="pPrice" type="number" min="0" step="1000" placeholder="۵۹۰۰۰۰" required></div>
+              <div class="form-row"><label for="pOriginal">قیمت قبل تخفیف</label><input id="pOriginal" type="number" min="0" step="1000" placeholder="اختیاری"></div>
+            </div>
+            <div class="form-row"><label for="pType">نوع محصول</label>
+              <select id="pType">
+                <option value="bra">سوتین 👙</option><option value="brief">شورت 🩲</option><option value="set">ست 🎀</option>
+                <option value="robe">ربدوشامبر 🥻</option><option value="cami">نیم‌تنه 👚</option><option value="cardigan">کاردیگان 🧶</option>
+              </select>
+              <div class="size-add-row" style="margin-top:.5rem">
+                <input type="text" id="typeNewInput" maxlength="20" placeholder="نوع دلخواه، مثلاً لباس خواب">
+                <button class="btn btn-outline btn-sm" type="button" id="typeAddBtn">افزودن نوع</button>
+              </div>
+            </div>
+            <div class="form-row"><label for="pStockQty">موجودی (تعداد)</label><input id="pStockQty" type="number" min="0" step="1" placeholder="مثلاً ۱۰"></div>
+            <div class="form-row"><label for="pDescription">توضیحات</label><textarea id="pDescription" placeholder="یک یا دو جمله درباره این محصول"></textarea></div>
+            <div class="form-row"><label for="pSpecs">مشخصات (هر مورد در یک خط)</label><textarea id="pSpecs" placeholder="جنس: پنبه و الاستان"></textarea></div>
+            <div class="form-row">
+              <label>رنگ‌های موجود</label>
+              <div class="swatches" id="swatches">
+                <span class="swatch-add" title="افزودن رنگ دلخواه"><input type="color" id="colorPicker" value="#ff7fa8"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <label>سایزهای موجود</label>
+              <div class="size-opts" id="sizeOptions"></div>
+              <div class="size-add-row">
+                <input type="text" id="sizeNewInput" maxlength="6" placeholder="سایز دلخواه، مثلاً 38 یا One Size">
+                <button class="btn btn-outline btn-sm" type="button" id="sizeAddBtn">افزودن سایز</button>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="pImageFile">عکس محصول (اختیاری)</label>
+              <input id="pImageFile" type="file" accept="image/*">
+              <img id="pImagePreview" alt="پیش‌نمایش" hidden>
+            </div>
+            <div class="check-row"><input type="checkbox" id="pNew"><label for="pNew">برچسب «جدید»</label></div>
+            <div class="check-row"><input type="checkbox" id="pTrend"><label for="pTrend">برچسب «پرفروش»</label></div>
+            <p class="field-err" id="prodErr" aria-live="polite"></p>
+            <p id="editBar" hidden style="font-size:.85rem;color:var(--pink-dark);margin-bottom:.7rem">در حال ویرایش محصول — <button type="button" id="cancelEdit" style="background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:0">لغو</button></p>
+            <button class="btn btn-primary btn-block" type="submit" id="productSubmitBtn">افزودن به فروشگاه</button>
+          </form>
+        </div>
+        <div class="panel card">
+          <h2>محصولات فروشگاه</h2>
+          <div class="admin-list" id="adminList"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tabUsers" hidden>
+      <div class="panel card">
+        <h2>کاربران ثبت‌شده</h2>
+        <p class="muted" style="margin-bottom:1rem">می‌توانید دسترسی هر شماره را مسدود یا آزاد کنید.</p>
+        <div class="users-panel" id="usersList"></div>
+      </div>
+    </div>
+
+    <div id="tabSettings" hidden>
+      <div class="panel card">
+        <h2>تغییرات سایت</h2>
+        <div class="form-row">
+          <label for="announceInput">نوشته بالای سایت (اخبار)</label>
+          <input type="text" id="announceInput" placeholder="مثلاً: کالکشن جدید رسید 🌸 ارسال رایگان بالای ۲٬۰۰۰٬۰۰۰ تومان">
+        </div>
+        <button class="btn btn-primary btn-sm" type="button" id="saveAnnounceBtn">ذخیره</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true">
+  <div class="drawer-head"><h2>سبد خرید</h2>
+    <button class="icon-btn" id="closeCart" type="button" aria-label="بستن">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="cartList"></div>
+  <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+
+<div class="pdp-overlay" id="pdpOverlay"></div>
+<div class="pdp" id="pdp" role="dialog" aria-modal="true">
+  <div class="pdp-card card">
+    <button class="icon-btn pdp-close" id="pdpClose" type="button" aria-label="بستن">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div id="pdpBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var fa = function (n) { return Number(n).toLocaleString('fa-IR'); };
+  var money = function (n) { return fa(n) + ' تومان'; };
+  var ADMIN_PHONE = '13909600';
+  var SIZE_PRESET = ['S', 'M', 'L', 'XL', 'XXL'];
+
+  var audioCtx = null;
+  function getCtx() { if (!audioCtx) { try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { audioCtx = null; } } return audioCtx; }
+  function playTone(freq, dur, type, vol) {
+    var c = getCtx(); if (!c) return;
+    try {
+      var t0 = c.currentTime;
+      var osc = c.createOscillator(), gain = c.createGain();
+      osc.type = type || 'sine';
+      osc.frequency.setValueAtTime(freq, t0);
+      gain.gain.setValueAtTime(0, t0);
+      gain.gain.linearRampToValueAtTime(vol || 0.15, t0 + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+      osc.connect(gain); gain.connect(c.destination);
+      osc.start(t0); osc.stop(t0 + dur + 0.02);
+    } catch (e) {}
+  }
+  function vibrate(ms) { try { if (navigator.vibrate) navigator.vibrate(ms); } catch (e) {} }
+  function sfxClick() { playTone(650, .06, 'sine', .08); vibrate(8); }
+  function sfxAdd() { playTone(520, .09, 'triangle', .13); playTone(760, .11, 'triangle', .11); vibrate(15); }
+  function sfxSuccess() { playTone(523, .1, 'sine', .14); vibrate([15, 40, 15]); }
+  function sfxError() { playTone(230, .18, 'sawtooth', .09); vibrate([30, 30, 30]); }
+
+  function toEnglishDigits(str) {
+    var map = { '۰':'0','۱':'1','۲':'2','۳':'3','۴':'4','۵':'5','۶':'6','۷':'7','۸':'8','۹':'9' };
+    return String(str).replace(/[۰-۹]/g, function (d) { return map[d]; });
+  }
+  function normalizePhone(v) { return toEnglishDigits(v).replace(/\D/g, ''); }
+
+  function loadJSON(key, fallback) { try { var raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : fallback; } catch (e) { return fallback; } }
+  function saveJSON(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); return true; } catch (e) { return false; } }
+  function loadCustom() { return loadJSON('golbarg_custom_products', []); }
+  function saveCustom(list) { return saveJSON('golbarg_custom_products', list); }
+  function loadUsers() { return loadJSON('golbarg_users', []); }
+  function saveUsers(list) { saveJSON('golbarg_users', list); }
+  function loadWishlist() { return loadJSON('golbarg_wishlist', []); }
+  function saveWishlist(list) { saveJSON('golbarg_wishlist', list); }
+  function loadStock() { return loadJSON('golbarg_stock', {}); }
+  function saveStock(map) { saveJSON('golbarg_stock', map); }
+  function getStock(p) { var map = loadStock(); return Object.prototype.hasOwnProperty.call(map, p.id) ? map[p.id] : (p.stock != null ? p.stock : 0); }
+  function setStock(id, val) { var map = loadStock(); map[id] = Math.max(0, val); saveStock(map); }
+  function loadCustomColors() { return loadJSON('golbarg_custom_colors', []); }
+  function saveCustomColors(list) { saveJSON('golbarg_custom_colors', list); }
+  function loadCustomSizes() { return loadJSON('golbarg_custom_sizes', []); }
+  function saveCustomSizesList(list) { saveJSON('golbarg_custom_sizes', list); }
+  function loadHidden() { return loadJSON('golbarg_hidden', {}); }
+  function saveHidden(map) { saveJSON('golbarg_hidden', map); }
+  function isHidden(id) { return !!loadHidden()[id]; }
+  function setHidden(id, val) { var map = loadHidden(); if (val) map[id] = true; else delete map[id]; saveHidden(map); }
+  var DEFAULT_ANNOUNCE = 'کالکشن جدید رسید 🌸 ارسال رایگان بالای ۲٬۰۰۰٬۰۰۰ تومان';
+  function loadAnnounceText() { return loadJSON('golbarg_announce', DEFAULT_ANNOUNCE); }
+  function saveAnnounceText(txt) { saveJSON('golbarg_announce', txt); }
+  function applyAnnounceText() { $('#announceBar').textContent = loadAnnounceText(); }
+  applyAnnounceText();
+
+  var toastEl = $('#toast'), toastTimer;
+  function toast(msg) {
+    toastEl.textContent = msg; toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2400);
+  }
+
+  /* ---------- colors ---------- */
+  var PRESET_COLORS = {
+    blush: '#f7c9dd', rose: '#e8829f', plum: '#c23a6c', cream: '#f7ecd9',
+    taupe: '#cbb6a3', black: '#2b2b2b', navy: '#364a63', mint: '#b9e3d0',
+    lavender: '#d9c6ea', gold: '#e8c26b', red: '#c2394a', white: '#ffffff'
+  };
+  function clamp(n) { return Math.max(0, Math.min(255, n)); }
+  function shade(hex, pct) {
+    hex = (hex || '#e8829f').replace('#', '');
+    if (hex.length === 3) hex = hex.split('').map(function (c) { return c + c; }).join('');
+    var r = parseInt(hex.substr(0, 2), 16), g = parseInt(hex.substr(2, 2), 16), b = parseInt(hex.substr(4, 2), 16);
+    var amt = Math.round(255 * (pct / 100));
+    r = clamp(r + amt); g = clamp(g + amt); b = clamp(b + amt);
+    return '#' + [r, g, b].map(function (v) { return v.toString(16).padStart(2, '0'); }).join('');
+  }
+  function hexFor(id) {
+    if (PRESET_COLORS[id]) return PRESET_COLORS[id];
+    var custom = loadCustomColors().filter(function (c) { return c.id === id; })[0];
+    if (custom) return custom.hex;
+    if (/^#[0-9a-fA-F]{3,6}$/.test(id)) return id;
+    return '#e8829f';
+  }
+  function paletteFor(id) {
+    var hex = hexFor(id);
+    return { swatch: hex, main: hex, dark: shade(hex, -25), light: shade(hex, 35) };
+  }
+
+  var EMOJI = { bra: '👙', brief: '🩲', set: '🎀', robe: '🥻', cami: '👚', cardigan: '🧶' };
+  function mediaHTML(p, colorId, sizeSmall) {
+    if (p.image) return '<img src="' + p.image + '" alt="' + p.name + '">';
+    var pal = paletteFor(colorId || (p.colors && p.colors[0]) || 'rose');
+    var bg = shade(pal.main, 42);
+    var fs = sizeSmall ? '1.6rem' : '3.4rem';
+    return '<div style="width:100%;height:100%;background:' + bg + ';display:flex;align-items:center;justify-content:center;font-size:' + fs + '">' + (EMOJI[p.type] || '👗') + '</div>';
+  }
+
+  var TYPES = { bra: 'سوتین', brief: 'شورت', set: 'ست', robe: 'ربدوشامبر', cami: 'نیم‌تنه', cardigan: 'کاردیگان' };
+  function loadCustomTypes() { return loadJSON('golbarg_custom_types', []); }
+  function saveCustomTypesList(list) { saveJSON('golbarg_custom_types', list); }
+  function typeLabel(key) {
+    if (TYPES[key]) return TYPES[key];
+    var ct = loadCustomTypes().filter(function (t) { return t.id === key; })[0];
+    return ct ? ct.label : (key || '');
+  }
+
+  var DEFAULTS = [
+    { id: 'bra1', name: 'سوتین بدون سیم بامبو', price: 590000, originalPrice: null, type: 'bra', colors: ['rose', 'mint', 'cream'], sizes: ['S', 'M', 'L', 'XL'], isNew: true, trend: true, stock: 14, custom: false,
+      description: 'سوتین بدون سیم و بدون درز، نرم و راحت برای استفاده روزانه.', specs: 'جنس: بامبو و الاستان\nبدون سیم\nشست‌وشو: دستی' },
+    { id: 'bra2', name: 'سوتین توری گلبرگ', price: 690000, originalPrice: 850000, type: 'bra', colors: ['blush', 'lavender'], sizes: ['S', 'M', 'L'], isNew: false, trend: false, stock: 6, custom: false,
+      description: 'سوتین توری ظریف، مناسب زیرلباس‌های نازک.', specs: 'جنس: توری با آستر نرم\nسیم‌دار\nشست‌وشو: دستی' },
+    { id: 'brief1', name: 'شورت پنبه‌ای ساده', price: 210000, originalPrice: null, type: 'brief', colors: ['cream', 'white', 'taupe'], sizes: ['S', 'M', 'L', 'XL'], isNew: false, trend: true, stock: 25, custom: false,
+      description: 'شورت پنبه‌ای راحت با کش نرم.', specs: 'جنس: پنبه و الاستان\nبسته سه‌تایی' },
+    { id: 'brief2', name: 'شورت تور کمرباریک', price: 250000, originalPrice: 320000, type: 'brief', colors: ['plum', 'black'], sizes: ['S', 'M'], isNew: true, trend: false, stock: 0, custom: false,
+      description: 'شورت توری با کمر باریک و سبک.', specs: 'جنس: تور نایلونی\nشست‌وشو: دستی' },
+    { id: 'set1', name: 'ست سوتین و شورت برگ', price: 980000, originalPrice: 1200000, type: 'set', colors: ['rose', 'gold'], sizes: ['S', 'M', 'L'], isNew: true, trend: true, stock: 8, custom: false,
+      description: 'ست هماهنگ سوتین و شورت، مناسب هدیه.', specs: 'جنس: پنبه و الاستان\nست دو تکه' },
+    { id: 'robe1', name: 'ربدوشامبر ساتن', price: 1450000, originalPrice: null, type: 'robe', colors: ['navy', 'plum'], sizes: ['S', 'M', 'L', 'XL'], isNew: false, trend: false, stock: 5, custom: false,
+      description: 'ربدوشامبر بلند و نرم، مناسب فصل‌های خنک.', specs: 'جنس: ساتن\nآستین بلند، کمربند دار' },
+    { id: 'cami1', name: 'نیم‌تنه حریر شب', price: 640000, originalPrice: 780000, type: 'cami', colors: ['cream', 'blush'], sizes: ['S', 'M', 'L'], isNew: true, trend: false, stock: 9, custom: false,
+      description: 'نیم‌تنه سبک با بند قابل تنظیم.', specs: 'جنس: حریر مصنوعی' },
+    { id: 'cardigan1', name: 'کاردیگان خانگی نرم', price: 890000, originalPrice: null, type: 'cardigan', colors: ['taupe', 'mint'], sizes: ['M', 'L', 'XL'], isNew: false, trend: true, stock: 0, custom: false,
+      description: 'کاردیگان نرم برای استفاده خانگی.', specs: 'جنس: آکریلیک و پشم' }
+  ];
+
+  function loadDefaultOverrides() { return loadJSON('golbarg_default_overrides', {}); }
+  function saveDefaultOverrides(map) { saveJSON('golbarg_default_overrides', map); }
+  function allProducts() {
+    var overrides = loadDefaultOverrides();
+    var defaultsMerged = DEFAULTS.map(function (p) { var o = overrides[p.id]; return o ? Object.assign({}, p, o) : p; });
+    return defaultsMerged.concat(loadCustom());
+  }
+  function findProduct(id) { return allProducts().filter(function (p) { return p.id === id; })[0]; }
+  function discountPct(p) {
+    if (!p.originalPrice || p.originalPrice <= p.price) return 0;
+    return Math.round((p.originalPrice - p.price) / p.originalPrice * 100);
+  }
+
+  var wishlist = loadWishlist();
+  function isWished(id) { return wishlist.indexOf(id) > -1; }
+  function toggleWish(id) {
+    var i = wishlist.indexOf(id);
+    if (i > -1) wishlist.splice(i, 1); else wishlist.push(id);
+    saveWishlist(wishlist);
+  }
+
+  var grid = $('#grid');
+  var currentSort = 'default', currentSearch = '', stockOnly = false;
+
+  function renderShop() {
+    var list = allProducts().slice().filter(function (p) { return !isHidden(p.id); });
+    var searchVal = currentSearch.trim();
+    if (searchVal) list = list.filter(function (p) { return p.name.indexOf(searchVal) > -1; });
+    if (stockOnly) list = list.filter(function (p) { return getStock(p) > 0; });
+    if (currentSort === 'price-desc') list.sort(function (a, b) { return b.price - a.price; });
+    if (currentSort === 'price-asc') list.sort(function (a, b) { return a.price - b.price; });
+    if (currentSort === 'trend') list.sort(function (a, b) { return (b.trend ? 1 : 0) - (a.trend ? 1 : 0); });
+    if (currentSort === 'discount') list.sort(function (a, b) { return discountPct(b) - discountPct(a); });
+
+    grid.innerHTML = list.map(function (p) {
+      var badge = p.isNew ? '<span class="tag">جدید</span>' : (p.trend ? '<span class="tag-trend">پرفروش</span>' : '');
+      var dpct = discountPct(p);
+      var priceHtml = dpct > 0
+        ? '<span class="old-price">' + money(p.originalPrice) + '</span>' + money(p.price) + ' <span class="disc-badge">(' + fa(dpct) + '٪)</span>'
+        : money(p.price);
+      var stock = getStock(p);
+      return '<article class="product">' +
+        '<div class="p-media" role="button" tabindex="0" data-open="' + p.id + '">' + badge +
+          '<button type="button" class="wish" data-wish="' + p.id + '">' + (isWished(p.id) ? '❤️' : '🤍') + '</button>' +
+          (stock <= 0 ? '<div class="oos">ناموجود</div>' : '') +
+          mediaHTML(p) +
+        '</div>' +
+        '<div class="p-info"><h3 class="p-name">' + p.name + '</h3><p class="p-cat">' + typeLabel(p.type) + '</p><p class="p-price">' + priceHtml + '</p>' +
+          '<button type="button" class="btn btn-outline btn-block" data-open="' + p.id + '">' + (stock <= 0 ? 'مشاهده جزئیات' : 'مشاهده و افزودن') + '</button>' +
+        '</div></article>';
+    }).join('');
+    if (!list.length) grid.innerHTML = '<p class="empty-shop">محصولی پیدا نشد.</p>';
+    $('#resultCount').textContent = 'نمایش ' + fa(list.length) + ' محصول' + (searchVal ? ' برای «' + searchVal + '»' : '');
+  }
+
+  grid.addEventListener('click', function (e) {
+    var wishBtn = e.target.closest('.wish');
+    if (wishBtn) {
+      var wid = wishBtn.getAttribute('data-wish');
+      toggleWish(wid);
+      wishBtn.textContent = isWished(wid) ? '❤️' : '🤍';
+      sfxClick();
+      return;
+    }
+    var openEl = e.target.closest('[data-open]');
+    if (openEl) openProductDetail(openEl.getAttribute('data-open'));
+  });
+  grid.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var openEl = e.target.closest('[role="button"][data-open]');
+    if (!openEl) return;
+    e.preventDefault();
+    openProductDetail(openEl.getAttribute('data-open'));
+  });
+
+  $$('.filters .chip[data-sort]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      currentSort = b.getAttribute('data-sort');
+      $$('.filters .chip[data-sort]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      renderShop(); sfxClick();
+    });
+  });
+  $('#stockToggle').addEventListener('click', function () {
+    stockOnly = !stockOnly;
+    this.setAttribute('aria-pressed', stockOnly ? 'true' : 'false');
+    renderShop(); sfxClick();
+  });
+  var searchBtn = $('#searchBtn'), searchRow = $('#searchRow'), searchInput = $('#searchInput');
+  searchBtn.addEventListener('click', function () {
+    var open = searchRow.classList.toggle('open');
+    searchBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) setTimeout(function () { searchInput.focus(); }, 150);
+  });
+  searchInput.addEventListener('input', function () { currentSearch = this.value; renderShop(); });
+
+  /* ---------- product detail ---------- */
+  var pdpOverlay = $('#pdpOverlay'), pdp = $('#pdp');
+  function openProductDetail(id) {
+    var p = findProduct(id); if (!p) return;
+    var colors = (p.colors && p.colors.length) ? p.colors : ['rose'];
+    var sizes = (p.sizes && p.sizes.length) ? p.sizes : ['S', 'M', 'L'];
+    var selColor = colors[0], selSize = sizes[0];
+
+    function paint() {
+      var stock = getStock(p);
+      var dpct = discountPct(p);
+      var priceHtml = dpct > 0
+        ? '<span class="old-price">' + money(p.originalPrice) + '</span>' + money(p.price) + ' <span class="disc-badge">(' + fa(dpct) + '٪)</span>'
+        : money(p.price);
+      var specsLines = (p.specs || '').split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
+      var noteClass = stock <= 0 ? 'out' : (stock <= 3 ? 'low' : '');
+      var noteText = stock <= 0 ? 'ناموجود' : (stock <= 3 ? 'تنها ' + fa(stock) + ' عدد باقی مانده' : 'موجود در انبار');
+
+      $('#pdpBody').innerHTML =
+        '<div class="pdp-grid">' +
+          '<div class="pdp-media">' + mediaHTML(p, selColor) + '</div>' +
+          '<div class="pdp-body">' +
+            '<h2>' + p.name + '</h2>' +
+            '<p class="p-cat">' + typeLabel(p.type) + '</p>' +
+            '<p class="pdp-price">' + priceHtml + '</p>' +
+            (p.description ? '<p class="pdp-desc">' + p.description + '</p>' : '') +
+            (specsLines.length ? ('<div class="pdp-specs"><h3>مشخصات</h3><ul>' + specsLines.map(function (l) { return '<li>' + l + '</li>'; }).join('') + '</ul></div>') : '') +
+            '<div class="pdp-group"><label>رنگ</label><div class="pdp-colors" id="pdpColors">' +
+              colors.map(function (ck) { return '<button type="button" class="pdp-color" data-color="' + ck + '" style="background:' + hexFor(ck) + '" aria-pressed="' + (ck === selColor) + '"></button>'; }).join('') +
+            '</div></div>' +
+            '<div class="pdp-group"><label>سایز</label><div class="pdp-sizes" id="pdpSizes">' +
+              sizes.map(function (s) { return '<button type="button" data-size="' + s + '" aria-pressed="' + (s === selSize) + '">' + s + '</button>'; }).join('') +
+            '</div></div>' +
+            '<p class="pdp-stock' + (noteClass ? ' ' + noteClass : '') + '">' + noteText + '</p>' +
+            '<button type="button" class="btn btn-primary btn-block" id="pdpAdd"' + (stock <= 0 ? ' disabled' : '') + '>' + (stock <= 0 ? 'ناموجود' : 'افزودن به سبد خرید') + '</button>' +
+          '</div>' +
+        '</div>';
+
+      $$('#pdpColors .pdp-color').forEach(function (b) { b.addEventListener('click', function () { selColor = b.getAttribute('data-color'); paint(); }); });
+      $$('#pdpSizes button').forEach(function (b) {
+        b.addEventListener('click', function () {
+          selSize = b.getAttribute('data-size');
+          $$('#pdpSizes button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        });
+      });
+      var addBtn = $('#pdpAdd');
+      if (addBtn) addBtn.addEventListener('click', function () { if (addToCart(p.id, selSize, selColor)) closeProductDetail(); });
+    }
+    paint();
+    pdpOverlay.classList.add('show'); pdp.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProductDetail() { pdpOverlay.classList.remove('show'); pdp.classList.remove('open'); document.body.style.overflow = ''; }
+  $('#pdpClose').addEventListener('click', closeProductDetail);
+  pdpOverlay.addEventListener('click', closeProductDetail);
+
+  /* ---------- cart ---------- */
+  var cart = [];
+  var drawer = $('#drawer'), overlay = $('#overlay'), cartBtn = $('#cartBtn');
+  function addToCart(id, size, color) {
+    var p = findProduct(id); if (!p) return false;
+    var stock = getStock(p);
+    if (stock <= 0) { toast('این محصول ناموجود است'); sfxError(); return false; }
+    setStock(id, stock - 1);
+    var key = id + '|' + size + '|' + color;
+    var found = cart.filter(function (i) { return i.key === key; })[0];
+    if (found) found.qty += 1; else cart.push({ key: key, id: id, size: size, color: color, qty: 1 });
+    renderCart(); renderShop();
+    toast('«' + p.name + '» به سبد اضافه شد'); sfxAdd();
+    return true;
+  }
+  function renderCart() {
+    var list = $('#cartList'), foot = $('#cartFoot');
+    var qty = cart.reduce(function (a, i) { return a + i.qty; }, 0);
+    var badge = $('#cartCount');
+    badge.hidden = qty === 0; badge.textContent = fa(qty);
+    if (!cart.length) {
+      list.innerHTML = '<div class="empty"><p>سبد خرید شما خالی است.</p><a class="btn btn-outline" href="#shop" data-act="close">دیدن محصولات</a></div>';
+      foot.innerHTML = ''; return;
+    }
+    var total = 0;
+    list.innerHTML = cart.map(function (i) {
+      var p = findProduct(i.id); if (!p) return '';
+      total += p.price * i.qty;
+      return '<div class="ci"><div class="ci-media">' + mediaHTML(p, i.color, true) + '</div><div>' +
+        '<div class="ci-name">' + p.name + '</div>' +
+        '<div class="ci-meta">سایز ' + i.size + ' <span class="ci-swatch" style="background:' + hexFor(i.color) + '"></span></div>' +
+        '<div class="qty"><button type="button" data-act="inc" data-key="' + i.key + '">+</button><span>' + fa(i.qty) + '</span><button type="button" data-act="dec" data-key="' + i.key + '">−</button></div></div>' +
+        '<div><div class="ci-price">' + money(p.price * i.qty) + '</div><button type="button" class="ci-remove" data-act="rm" data-key="' + i.key + '">حذف</button></div></div>';
+    }).join('');
+    var FREE_SHIPPING = 2000000;
+    var left = Math.max(0, FREE_SHIPPING - total);
+    foot.innerHTML = '<div class="ship">' + (left ? money(left) + ' تا ارسال رایگان' : 'ارسال رایگان است') + '</div>' +
+      '<div class="total"><span>جمع کل</span><strong>' + money(total) + '</strong></div>' +
+      '<button type="button" class="btn btn-primary btn-block" data-act="checkout">ادامه خرید</button>';
+  }
+  function openCart() { drawer.classList.add('open'); overlay.classList.add('show'); document.body.style.overflow = 'hidden'; }
+  function closeCart() { drawer.classList.remove('open'); overlay.classList.remove('show'); document.body.style.overflow = ''; }
+  cartBtn.addEventListener('click', openCart);
+  $('#closeCart').addEventListener('click', closeCart);
+  overlay.addEventListener('click', closeCart);
+  drawer.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-act]'); if (!el) return;
+    var act = el.getAttribute('data-act'), key = el.getAttribute('data-key');
+    if (act === 'close') { closeCart(); return; }
+    if (act === 'checkout') { toast('این نسخه نمونه است.'); return; }
+    var item = cart.filter(function (i) { return i.key === key; })[0];
+    if (!item) return;
+    var p = findProduct(item.id);
+    if (act === 'inc') { var s = getStock(p); if (s <= 0) { toast('موجودی تمام شده است'); sfxError(); return; } setStock(item.id, s - 1); item.qty += 1; sfxClick(); }
+    if (act === 'dec') { item.qty = Math.max(0, item.qty - 1); setStock(item.id, getStock(p) + 1); sfxClick(); }
+    if (act === 'rm') { setStock(item.id, getStock(p) + item.qty); item.qty = 0; sfxClick(); }
+    cart = cart.filter(function (i) { return i.qty > 0; });
+    renderCart(); renderShop();
+  });
+
+  var menuBtn = $('#menuBtn'), nav = $('#nav');
+  menuBtn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  $$('a', nav).forEach(function (a) { a.addEventListener('click', function () { nav.classList.remove('open'); }); });
+  $('#siteBrand').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (pdp.classList.contains('open')) { closeProductDetail(); return; }
+    if (drawer.classList.contains('open')) { closeCart(); return; }
+    nav.classList.remove('open');
+  });
+  $('#logoutLink').addEventListener('click', function () { doLogout(); });
+
+  /* ---------- screens ---------- */
+  var SCREEN_MAP = { splash: 'splashScreen', phone: 'phoneScreen', otp: 'otpScreen', site: 'siteScreen', admin: 'adminScreen' };
+  function showScreen(name) {
+    Object.keys(SCREEN_MAP).forEach(function (k) { $('#' + SCREEN_MAP[k]).hidden = true; });
+    $('#' + SCREEN_MAP[name]).hidden = false;
+    window.scrollTo(0, 0);
+    document.body.style.overflow = '';
+  }
+  $('#enterBtn').addEventListener('click', function () { sfxClick(); showScreen('phone'); $('#phoneInput').focus(); });
+  $('#phoneBack').addEventListener('click', function () { showScreen('splash'); });
+
+  var pendingPhone = '', pendingCode = '';
+  function generateCode() { return String(Math.floor(1000 + Math.random() * 9000)); }
+  function showDemoCode(prefix) {
+    $('#demoCode').innerHTML = prefix + '<br>کد نمایشی: <b class="bdi-ltr" dir="ltr">' + pendingCode.split('').join(' ') + '</b>';
+  }
+  var otpInputs = $$('.otp-boxes input');
+
+  $('#phoneForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var raw = normalizePhone($('#phoneInput').value);
+    var errEl = $('#phoneErr');
+    if (raw.length < 8) { errEl.textContent = 'شماره موبایل را کامل و صحیح وارد کنید.'; $('#phoneInput').focus(); return; }
+    errEl.textContent = '';
+    pendingPhone = raw; pendingCode = generateCode();
+    $('#phoneShow').textContent = raw;
+    showDemoCode('این نسخه آزمایشی است، پیامک واقعی ارسال نمی‌شود.');
+    otpInputs.forEach(function (inp) { inp.value = ''; inp.classList.remove('err'); });
+    $('#otpErr').textContent = '';
+    showScreen('otp');
+    setTimeout(function () { otpInputs[0].focus(); }, 30);
+  });
+
+  $('#otpBack').addEventListener('click', function () { showScreen('phone'); });
+  $('#changePhone').addEventListener('click', function () { showScreen('phone'); setTimeout(function () { $('#phoneInput').focus(); }, 30); });
+  $('#resendBtn').addEventListener('click', function () {
+    pendingCode = generateCode();
+    showDemoCode('کد جدید ارسال شد.');
+    toast('کد جدید تولید شد');
+  });
+
+  otpInputs.forEach(function (inp, idx) {
+    inp.addEventListener('input', function () {
+      inp.value = toEnglishDigits(inp.value).replace(/\D/g, '').slice(0, 1);
+      inp.classList.remove('err');
+      if (inp.value && otpInputs[idx + 1]) otpInputs[idx + 1].focus();
+      if (otpInputs.every(function (i) { return i.value; })) setTimeout(verifyOtp, 120);
+    });
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Backspace' && !inp.value && otpInputs[idx - 1]) otpInputs[idx - 1].focus(); });
+    inp.addEventListener('paste', function (e) {
+      var text = normalizePhone((e.clipboardData || window.clipboardData).getData('text'));
+      if (!text) return;
+      e.preventDefault();
+      text.split('').slice(0, 4).forEach(function (ch, i) { if (otpInputs[i]) otpInputs[i].value = ch; });
+      var last = otpInputs[Math.min(text.length, 4) - 1];
+      if (last) last.focus();
+      if (otpInputs.every(function (i) { return i.value; })) setTimeout(verifyOtp, 120);
+    });
+  });
+
+  function upsertUser(phone) {
+    var users = loadUsers();
+    var u = users.filter(function (x) { return x.phone === phone; })[0];
+    var now = new Date().toISOString();
+    if (u) { u.lastSeen = now; u.logins = (u.logins || 1) + 1; }
+    else { u = { phone: phone, firstSeen: now, lastSeen: now, logins: 1, blocked: false }; users.push(u); }
+    saveUsers(users);
+  }
+  function isBlocked(phone) { var u = loadUsers().filter(function (x) { return x.phone === phone; })[0]; return !!(u && u.blocked); }
+
+  var isAdminSession = false;
+  function updateHeaderAdminBtn() { $('#backToAdminBtn').hidden = !isAdminSession; }
+
+  function verifyOtp() {
+    var code = otpInputs.map(function (i) { return i.value; }).join('');
+    var errEl = $('#otpErr');
+    if (code.length < 4) { errEl.textContent = 'هر ۴ رقم کد را وارد کنید.'; otpInputs.forEach(function (i) { if (!i.value) i.classList.add('err'); }); return; }
+    var card = document.querySelector('#otpScreen .auth-card');
+    if (code !== pendingCode) {
+      errEl.textContent = 'کد وارد شده صحیح نیست.';
+      otpInputs.forEach(function (i) { i.classList.add('err'); });
+      card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake');
+      sfxError();
+      return;
+    }
+    if (pendingPhone !== ADMIN_PHONE && isBlocked(pendingPhone)) {
+      errEl.textContent = 'این شماره مسدود شده است.';
+      card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake');
+      sfxError();
+      return;
+    }
+    errEl.textContent = '';
+    sfxSuccess();
+    if (pendingPhone === ADMIN_PHONE) {
+      isAdminSession = true;
+      toast('خوش آمدید مدیر گل برگ');
+      renderAdmin(); showScreen('admin');
+    } else {
+      upsertUser(pendingPhone);
+      toast('خوش آمدید به گل برگ');
+      renderShop(); showScreen('site'); updateHeaderAdminBtn();
+    }
+  }
+  $('#otpSubmit').addEventListener('click', verifyOtp);
+  otpInputs[otpInputs.length - 1].addEventListener('keydown', function (e) { if (e.key === 'Enter') verifyOtp(); });
+
+  function doLogout() { pendingPhone = ''; pendingCode = ''; isAdminSession = false; cart = []; renderCart(); showScreen('splash'); }
+  $('#headerLogoutBtn').addEventListener('click', doLogout);
+  $('#backToAdminBtn').addEventListener('click', function () { renderAdmin(); showScreen('admin'); });
+  $('#adminLogout').addEventListener('click', doLogout);
+  $('#viewSiteBtn').addEventListener('click', function () { renderShop(); showScreen('site'); updateHeaderAdminBtn(); });
+
+  /* ---------- admin: colors & sizes ---------- */
+  var selectedColors = ['rose'];
+  function renderSwatches() {
+    var host = $('#swatches');
+    var addBtn = host.querySelector('.swatch-add');
+    var presetHtml = Object.keys(PRESET_COLORS).map(function (k) {
+      return '<button type="button" class="swatch" data-pal="' + k + '" style="background:' + PRESET_COLORS[k] + '" aria-pressed="' + (selectedColors.indexOf(k) > -1) + '"></button>';
+    }).join('');
+    var customHtml = loadCustomColors().map(function (c) {
+      return '<button type="button" class="swatch" data-pal="' + c.id + '" style="background:' + c.hex + '" aria-pressed="' + (selectedColors.indexOf(c.id) > -1) + '"></button>';
+    }).join('');
+    host.innerHTML = presetHtml + customHtml;
+    host.appendChild(addBtn);
+  }
+  renderSwatches();
+  $('#swatches').addEventListener('click', function (e) {
+    var b = e.target.closest('.swatch'); if (!b) return;
+    var k = b.getAttribute('data-pal');
+    var i = selectedColors.indexOf(k);
+    if (i > -1) { if (selectedColors.length > 1) selectedColors.splice(i, 1); } else selectedColors.push(k);
+    b.setAttribute('aria-pressed', selectedColors.indexOf(k) > -1);
+  });
+  $('#colorPicker').addEventListener('change', function () {
+    var hex = this.value;
+    var id = 'custom' + Date.now();
+    var custom = loadCustomColors();
+    custom.push({ id: id, hex: hex });
+    saveCustomColors(custom);
+    selectedColors.push(id);
+    renderSwatches();
+    toast('رنگ جدید اضافه شد'); sfxClick();
+  });
+
+  var selectedSizes = ['S', 'M', 'L'];
+  function renderSizeOptions() {
+    var custom = loadCustomSizes();
+    var all = SIZE_PRESET.concat(custom);
+    $('#sizeOptions').innerHTML = all.map(function (s) {
+      return '<button type="button" data-size="' + s + '" aria-pressed="' + (selectedSizes.indexOf(s) > -1) + '">' + s + '</button>';
+    }).join('');
+  }
+  renderSizeOptions();
+  $('#sizeOptions').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var s = b.getAttribute('data-size');
+    var i = selectedSizes.indexOf(s);
+    if (i > -1) { if (selectedSizes.length > 1) selectedSizes.splice(i, 1); } else selectedSizes.push(s);
+    b.setAttribute('aria-pressed', selectedSizes.indexOf(s) > -1);
+  });
+  $('#sizeAddBtn').addEventListener('click', function () {
+    var input = $('#sizeNewInput');
+    var val = input.value.trim();
+    if (!val) { input.focus(); return; }
+    var custom = loadCustomSizes();
+    if (custom.indexOf(val) === -1 && SIZE_PRESET.indexOf(val) === -1) { custom.push(val); saveCustomSizesList(custom); }
+    if (selectedSizes.indexOf(val) === -1) selectedSizes.push(val);
+    input.value = '';
+    renderSizeOptions();
+    toast('سایز «' + val + '» اضافه شد'); sfxClick();
+  });
+
+  function populateTypeSelect() {
+    var select = $('#pType');
+    loadCustomTypes().forEach(function (t) {
+      if (!select.querySelector('option[value="' + t.id + '"]')) {
+        var opt = document.createElement('option');
+        opt.value = t.id; opt.textContent = t.label;
+        select.appendChild(opt);
+      }
+    });
+  }
+  populateTypeSelect();
+  $('#typeAddBtn').addEventListener('click', function () {
+    var input = $('#typeNewInput');
+    var label = input.value.trim();
+    if (!label) { input.focus(); return; }
+    var id = 'type' + Date.now();
+    var custom = loadCustomTypes();
+    custom.push({ id: id, label: label });
+    saveCustomTypesList(custom);
+    populateTypeSelect();
+    $('#pType').value = id;
+    input.value = '';
+    toast('نوع «' + label + '» اضافه شد'); sfxClick();
+  });
+
+  function resizeImage(file, maxDim, cb) {
+    var reader = new FileReader();
+    reader.onload = function (ev) {
+      var img = new Image();
+      img.onload = function () {
+        var scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+        var w = Math.max(1, Math.round(img.width * scale)), h = Math.max(1, Math.round(img.height * scale));
+        var canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        var dataUrl = null;
+        try { dataUrl = canvas.toDataURL('image/jpeg', 0.75); } catch (e) { dataUrl = null; }
+        cb(dataUrl);
+      };
+      img.onerror = function () { cb(null); };
+      img.src = ev.target.result;
+    };
+    reader.onerror = function () { cb(null); };
+    reader.readAsDataURL(file);
+  }
+  var pendingImage = null;
+  $('#pImageFile').addEventListener('change', function () {
+    var file = this.files && this.files[0];
+    pendingImage = null;
+    if (!file) { $('#pImagePreview').hidden = true; return; }
+    resizeImage(file, 420, function (dataUrl) {
+      pendingImage = dataUrl;
+      if (dataUrl) { $('#pImagePreview').src = dataUrl; $('#pImagePreview').hidden = false; }
+    });
+  });
+
+  function renderAdmin() {
+    var list = allProducts(); var custom = loadCustom(); var users = loadUsers();
+    $('#statTotal').textContent = fa(list.length);
+    $('#statCustom').textContent = fa(custom.length);
+    $('#statUsers').textContent = fa(users.length);
+    $('#statBlocked').textContent = fa(users.filter(function (u) { return u.blocked; }).length);
+
+    $('#adminList').innerHTML = list.map(function (p) {
+      var stock = getStock(p);
+      var hid = isHidden(p.id);
+      var actions = '<div class="admin-actions">' +
+        '<button class="btn btn-outline btn-sm" type="button" data-edit="' + p.id + '">ویرایش</button>' +
+        '<button class="btn btn-outline btn-sm" type="button" data-toggle-hide="' + p.id + '">' + (hid ? 'نمایش در سایت' : 'پنهان از سایت') + '</button>' +
+        (p.custom ? '<button class="btn btn-danger btn-sm" type="button" data-del="' + p.id + '">حذف</button>' : '<span class="ai-default" style="text-align:center">پیش‌فرض</span>') +
+      '</div>';
+      return '<div class="admin-item"><div class="admin-media">' + mediaHTML(p, null, true) + '</div><div>' +
+        '<div class="ai-name">' + p.name + (p.isNew ? '<span class="ai-badge">جدید</span>' : '') + (p.trend ? '<span class="ai-badge">پرفروش</span>' : '') + (stock <= 0 ? '<span class="ai-oos">ناموجود</span>' : '') + (hid ? '<span class="ai-oos">پنهان</span>' : '') + '</div>' +
+        '<div class="ai-meta">' + typeLabel(p.type) + ' · موجودی: ' + fa(stock) + '</div><div class="ai-price">' + money(p.price) + '</div></div>' +
+        actions + '</div>';
+    }).join('');
+    renderUsers();
+  }
+
+  function renderUsers() {
+    var users = loadUsers().slice().sort(function (a, b) { return new Date(b.lastSeen) - new Date(a.lastSeen); });
+    var host = $('#usersList');
+    if (!users.length) { host.innerHTML = '<p class="no-users">هنوز کاربری وارد نشده است.</p>'; return; }
+    host.innerHTML = users.map(function (u) {
+      var first = new Date(u.firstSeen).toLocaleDateString('fa-IR');
+      return '<div class="user-row">' +
+        '<div><div class="user-phone bdi-ltr" dir="ltr">' + u.phone + '</div><div class="user-meta">اولین ورود: ' + first + ' · ورودها: ' + fa(u.logins || 1) + '</div></div>' +
+        '<span class="badge ' + (u.blocked ? 'badge-blocked' : 'badge-active') + '">' + (u.blocked ? 'مسدود' : 'فعال') + '</span>' +
+        '<button type="button" class="btn btn-sm ' + (u.blocked ? 'btn-outline' : 'btn-danger') + '" data-toggle-user="' + u.phone + '">' + (u.blocked ? 'رفع مسدودیت' : 'مسدود کردن') + '</button>' +
+      '</div>';
+    }).join('');
+  }
+  $('#usersList').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-toggle-user]'); if (!b) return;
+    var phone = b.getAttribute('data-toggle-user');
+    var users = loadUsers();
+    var u = users.filter(function (x) { return x.phone === phone; })[0];
+    if (!u) return;
+    u.blocked = !u.blocked;
+    saveUsers(users);
+    renderUsers();
+    $('#statBlocked').textContent = fa(users.filter(function (x) { return x.blocked; }).length);
+    toast(u.blocked ? 'شماره مسدود شد' : 'مسدودیت برداشته شد'); sfxClick();
+  });
+
+  $$('.admin-tabs [role="tab"]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      $$('.admin-tabs [role="tab"]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      var tab = b.getAttribute('data-tab');
+      $('#tabProducts').hidden = tab !== 'products';
+      $('#tabUsers').hidden = tab !== 'users';
+      $('#tabSettings').hidden = tab !== 'settings';
+      if (tab === 'settings') $('#announceInput').value = loadAnnounceText();
+    });
+  });
+  $('#saveAnnounceBtn').addEventListener('click', function () {
+    var val = $('#announceInput').value.trim();
+    if (!val) { toast('متن نمی‌تواند خالی باشد'); return; }
+    saveAnnounceText(val);
+    applyAnnounceText();
+    toast('نوشته بالای سایت به‌روزرسانی شد'); sfxSuccess();
+  });
+
+  var editingId = null;
+  function startEdit(id) {
+    var p = findProduct(id);
+    if (!p) return;
+    editingId = id;
+    $('#pName').value = p.name;
+    $('#pPrice').value = p.price;
+    $('#pOriginal').value = p.originalPrice || '';
+    $('#pType').value = p.type;
+    $('#pStockQty').value = getStock(p);
+    $('#pDescription').value = p.description || '';
+    $('#pSpecs').value = p.specs || '';
+    $('#pNew').checked = !!p.isNew;
+    $('#pTrend').checked = !!p.trend;
+    selectedColors = (p.colors && p.colors.length) ? p.colors.slice() : ['rose'];
+    renderSwatches();
+    selectedSizes = (p.sizes && p.sizes.length) ? p.sizes.slice() : ['S', 'M', 'L'];
+    renderSizeOptions();
+    pendingImage = p.image || null;
+    if (p.image) { $('#pImagePreview').src = p.image; $('#pImagePreview').hidden = false; } else { $('#pImagePreview').hidden = true; }
+    $('#editBar').hidden = false;
+    $('#productSubmitBtn').textContent = 'ذخیره تغییرات';
+    $('#prodErr').textContent = '';
+    $('.panel h2', document).focus && null;
+    document.querySelector('#tabProducts .panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function cancelEdit() {
+    editingId = null;
+    $('#productForm').reset();
+    $('#pImagePreview').hidden = true;
+    pendingImage = null;
+    selectedColors = ['rose']; renderSwatches();
+    selectedSizes = ['S', 'M', 'L']; renderSizeOptions();
+    $('#editBar').hidden = true;
+    $('#productSubmitBtn').textContent = 'افزودن به فروشگاه';
+  }
+  $('#cancelEdit').addEventListener('click', cancelEdit);
+
+  $('#adminList').addEventListener('click', function (e) {
+    var delBtn = e.target.closest('[data-del]');
+    if (delBtn) {
+      saveCustom(loadCustom().filter(function (p) { return p.id !== delBtn.getAttribute('data-del'); }));
+      if (editingId === delBtn.getAttribute('data-del')) cancelEdit();
+      renderAdmin(); renderShop(); toast('محصول حذف شد'); sfxClick();
+      return;
+    }
+    var hideBtn = e.target.closest('[data-toggle-hide]');
+    if (hideBtn) {
+      var pid = hideBtn.getAttribute('data-toggle-hide');
+      var nowHidden = !isHidden(pid);
+      setHidden(pid, nowHidden);
+      renderAdmin(); renderShop();
+      toast(nowHidden ? 'محصول از سایت پنهان شد' : 'محصول دوباره روی سایت نمایش داده می‌شود'); sfxClick();
+      return;
+    }
+    var editBtn = e.target.closest('[data-edit]');
+    if (editBtn) { startEdit(editBtn.getAttribute('data-edit')); }
+  });
+
+  function saveNewProduct(imageDataUrl) {
+    var name = $('#pName').value.trim();
+    var price = Number($('#pPrice').value);
+    var origVal = $('#pOriginal').value ? Number($('#pOriginal').value) : null;
+    var stockVal = $('#pStockQty').value ? Math.max(0, Number($('#pStockQty').value)) : 0;
+    var fields = {
+      name: name, price: price,
+      originalPrice: (origVal && origVal > price) ? origVal : null,
+      type: $('#pType').value, colors: selectedColors.slice(), sizes: selectedSizes.slice(),
+      description: $('#pDescription').value.trim(), specs: $('#pSpecs').value,
+      isNew: $('#pNew').checked, trend: $('#pTrend').checked,
+      image: imageDataUrl || null
+    };
+
+    if (editingId) {
+      var existing = findProduct(editingId);
+      var isCustomProduct = existing && existing.custom;
+      if (isCustomProduct) {
+        var custom = loadCustom();
+        var idx = custom.findIndex(function (p) { return p.id === editingId; });
+        if (idx > -1) custom[idx] = Object.assign({}, custom[idx], fields);
+        var ok1 = saveCustom(custom);
+        if (!ok1) { toast('حجم عکس زیاد است؛ عکس کوچک‌تری امتحان کنید.'); return; }
+      } else {
+        var overrides = loadDefaultOverrides();
+        overrides[editingId] = fields;
+        saveDefaultOverrides(overrides);
+      }
+      setStock(editingId, stockVal);
+      editingId = null;
+      $('#editBar').hidden = true;
+      $('#productSubmitBtn').textContent = 'افزودن به فروشگاه';
+      $('#productForm').reset();
+      $('#pImagePreview').hidden = true;
+      pendingImage = null;
+      selectedColors = ['rose']; renderSwatches();
+      selectedSizes = ['S', 'M', 'L']; renderSizeOptions();
+      renderAdmin(); renderShop();
+      toast('تغییرات ذخیره شد'); sfxSuccess();
+      return;
+    }
+
+    var newId = 'c' + Date.now();
+    var custom2 = loadCustom();
+    custom2.push(Object.assign({ id: newId, stock: stockVal, custom: true }, fields));
+    var ok = saveCustom(custom2);
+    if (!ok) { toast('حجم عکس زیاد است؛ عکس کوچک‌تری امتحان کنید.'); return; }
+    setStock(newId, stockVal);
+    $('#productForm').reset();
+    $('#pImagePreview').hidden = true;
+    pendingImage = null;
+    selectedColors = ['rose']; renderSwatches();
+    selectedSizes = ['S', 'M', 'L']; renderSizeOptions();
+    renderAdmin(); renderShop();
+    toast('«' + name + '» اضافه شد'); sfxSuccess();
+  }
+
+  $('#productForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = $('#pName').value.trim(); var price = Number($('#pPrice').value); var errEl = $('#prodErr');
+    if (!name) { errEl.textContent = 'نام محصول را وارد کنید.'; $('#pName').focus(); return; }
+    if (!price || price <= 0) { errEl.textContent = 'قیمت معتبر وارد کنید.'; $('#pPrice').focus(); return; }
+    errEl.textContent = '';
+    var file = $('#pImageFile').files && $('#pImageFile').files[0];
+    if (file && !pendingImage) resizeImage(file, 420, function (dataUrl) { saveNewProduct(dataUrl); });
+    else saveNewProduct(pendingImage);
+  });
+
+  renderCart();
+})();
+</script>
+</body>
+</html>
